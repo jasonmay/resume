@@ -234,7 +234,7 @@ template section => sub {
         attr {
             class is "header"
         }
-        b { uc $section }
+        big { uc $section }
     };
     $item->[1]->();
 };
