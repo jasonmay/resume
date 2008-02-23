@@ -195,6 +195,29 @@ my @sections = (
             }
         }
         ],
+        [
+            interests => sub {
+                my @interests = (
+                [
+                    q{Conferences and Workshops} => sub {
+                        ul {
+                            li { "Frozen Perl 2008" }
+                            li { "Harrisburg Ruby Group meetups" }
+                            li { "Harrisburg Linux User Group meetups" }
+                        }
+                    }
+                ],
+                );
+
+                for (@interests) {
+                    my ($topic, $code) = @$_;
+                    p {
+                        b { $topic } br {};
+                        $code->();
+                    }
+                }
+            }
+        ]
 );
 
 for (@sections) {
