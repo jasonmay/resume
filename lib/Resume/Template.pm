@@ -80,7 +80,75 @@ my @sections = (
         ],
         [ 
             projects => sub {
-                p { "This resume. Duh." }
+                my @projects = (
+                {
+                    name  => 'This resume',
+                    url   => "http://j.asonmay.net/".
+                            "darcsweb/index.cgi?r=Resume;a=tree",
+                    tasks => [
+                        'Made with a Perl templating module: Template::Declare',
+                        'Currently in development'
+                    ]
+                },
+                {
+                    name => 'Photos',
+                    url  => "http://j.asonmay.net/".
+                            "darcsweb/index.cgi?r=Photos;a=tree",
+                    tasks => [
+                        'Made in Jifty, a Web app builder in Perl',
+                        'Being developed for fun',
+                        'Currently in development'
+                    ]
+                },
+                {
+                    name => 'Dataninja Interface',
+                    url  => "http://j.asonmay.net/".
+                            "darcsweb/index.cgi?r=Photos;a=tree",
+                    tasks => [
+                        'Made in Jifty, a Web app builder in Perl',
+                        'Being developed for fun',
+                        'Currently in development'
+                    ]
+                },
+                {
+                    name => 'IST 440W CMS',
+                    tasks => [
+                        'CMS that is being made in Ruby on Rails',
+                        'Utilizing the agile methodology',
+                        'Working in a team of eight developers',
+                        'Currently in development'
+                    ]
+                },
+                {
+                    name => 'York County Archives',
+                    tasks => [
+                        'Archiving system powered by Java Servlets',
+                        'Involved hundreds of thousands of rows in databases',
+                    ]
+                }
+                );
+
+                ul {
+                    for my $project (@projects) {
+                        li {
+                            if (exists $project->{url}) {
+                                a {
+                                    attr { href is $project->{url} }
+                                    $project->{name}
+                                }
+                            }
+                            else {
+                                span {
+                                    attr { style is "color: #008" }
+                                    $project->{name}
+                                }
+                            }
+                            ul {
+                                li { $_ } for @{$project->{tasks}};
+                            }
+                        }
+                    }
+                }
             }
         ],
         [ 
