@@ -10,8 +10,20 @@ use List::Util qw/first/;
 my @sections = (
         [ 
             education => sub {
-                ul {
-                    li { "some college" }
+                my %data = (
+                    'University'            => "The Pennsylvania State University",
+                    'GPA'                   => '3.40/4.00',
+                    'Expected to graduate'  => "Spring 2009",
+                    'Status'                => "I am currently on my sixth semester. I currently have one (time consuming) three-credit class. I will not be taking any classes this summer (2008).",
+                );
+
+                table {
+                    for (keys %data) {
+                        row {
+                            cell { b { $_ }  }
+                            cell { $data{$_} }
+                        }
+                    }
                 }
             }
         ],
