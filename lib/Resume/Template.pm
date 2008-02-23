@@ -152,17 +152,48 @@ my @sections = (
             }
         ],
         [ 
-            skills => sub {
-                my @skills = (
-                    "Self-motivated",
-                    "Learn quickly",
-                    "Eat burritos a lot"
-                );
+        skills => sub {
+            my @skills = (
+            [
+                q{Programming} => sub {
+                    ul {
+                        li { "Perl (Jifty, DBI, Test-driven Development)" }
+                        li { "Ruby on Rails (Test-driven Development)" }
+                        li { "Java (Servlets, JSP, Database, Networking)" }
+                        li { "PHP (CakePHP, Drupal)" }
+                    }
+                }
+            ],
+            [
+                q{Tools} => sub {
+                    ul {
+                        li { "Editing: Vim, Dreamweaver, Eclipse (original, Aptana), Netbeans, GIMP, Photoshop" }
+                        li { "Utilities: Apache, Bash" }
+                        li { "SCM: Subversion, darcs" }
+                        li { "Database: PostgreSQL, MySQL" }
+                        li { "Misc: XML, YAML" }
+                    }
+                }
+            ],
+            [
+                q{Operating Systems} => sub {
+                    ul {
+                        li {
+                            "*nix: ".
+                            "Gentoo 2007.0, Debian (Etch, Lenny), FreeBSD 6.2" }
+                    }
+                }
+            ],
+            );
 
-                ul {
-                    li { $_ } for @skills;
+            for (@skills) {
+                my ($topic, $code) = @$_;
+                p {
+                    b { $topic } br {};
+                    $code->();
                 }
             }
+        }
         ],
 );
 
