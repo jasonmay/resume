@@ -31,34 +31,46 @@ my @sections = (
             experience => sub {
                 my  @experience = (
                     [
-                        'Penn State York' => 'Helpdesk' => [
-                            "Solved IT-related problems among the school sampus"
-                        ]
-                    ],
-                    [
-                        'MCTG' => 'Software Engineer' => [
-                            "Developed a large-scale HVAC Web site"
-                        ]
-                    ],
-                    [
-                        'Penn State York' => 'Web Developer Intern' => [
-                            "Made updates to the campus Web site",
+                        'Penn State York',
+                        'Web Developer Intern',
+                        '(June 2007 - Present)' =>
+                        [
+                            "Make updates to the campus Web site",
 
-                            "Worked on individual projects for the campus",
+                            "Work on individual projects for the campus",
 
-                            "Researched Web technologies, ".
+                            "Research Web technologies, ".
                             "such as web programming languages, CSS, ".
                             "and MVC frameworks for the Web",
                         ]
                     ],
+                    [
+                        'Penn State York',
+                        'Helpdesk',
+                        '(January 2006 - May 2007)' =>
+                        [
+                            "Solved IT-related problems among the campus"
+                        ]
+                    ],
+                    [
+                        'MCTG',
+                        'Software Engineer',
+                        '(September 2006 - January 2007)' =>
+                        [
+                            "Developed a large-scale HVAC Web site",
+                            "Worked in a team of 9"
+                        ]
+                    ],
                 );
+
                 ul {
                     for (@experience) {
                         li {
-                            my ($employer, $title, $tasks) = @$_;
-                            em { $employer } br {}
-                            b { $title }    br {}
+                            my ($employer, $title, $era, $tasks) = @$_;
+                            em { $employer }            br {}
+                            b { $title } small { $era } br {}
                             ul {
+                                attr { class is "job" }
                                 li { $_ } for @$tasks;
                             }
                         }
