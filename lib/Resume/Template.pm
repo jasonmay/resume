@@ -243,6 +243,10 @@ template top => sub {
     div { img { attr { src is "top.gif" } } }
 };
 
+template footer => sub {
+    p { em { small { "Resume was last generated: " . localtime } } }
+};
+
 template wrap => sub {
     html {
         head {
@@ -251,6 +255,7 @@ template wrap => sub {
         body {
             show 'top';       
             show('section', $_->[0]) for @sections;
+            show 'footer';
         }
     }
 };
