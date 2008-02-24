@@ -105,7 +105,7 @@ my @sections = (
                     url  => "http://j.asonmay.net/".
                             "darcsweb/index.cgi?r=Photos;a=tree",
                     tasks => [
-                        'Made in Jifty, a Web app builder in Perl',
+                        'Interface for a logging bot on Internet Relay Chat',
                         'Being developed for fun',
                         'Currently in development'
                     ]
