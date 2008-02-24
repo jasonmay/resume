@@ -103,7 +103,7 @@ my @sections = (
                 {
                     name => 'Dataninja Interface',
                     url  => "http://j.asonmay.net/".
-                            "darcsweb/index.cgi?r=Photos;a=tree",
+                            "darcsweb/index.cgi?r=Dataninja;a=tree",
                     tasks => [
                         'Interface for a logging bot on Internet Relay Chat',
                         'Being developed for fun',
