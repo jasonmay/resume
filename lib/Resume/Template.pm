@@ -115,6 +115,7 @@ my @sections = (
                     tasks => [
                         'CMS that is being made in Ruby on Rails',
                         'Utilizing the agile methodology',
+                        'Assigned to be the scrum master of the development team',
                         'Working in a team of eight developers',
                         'Currently in development'
                     ]
