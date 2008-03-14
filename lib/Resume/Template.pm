@@ -155,7 +155,7 @@ my @sections = (
                     ]
                 },
                 {
-                    name => 'IST 440W CMS',
+                    name => 'Ruby on Rails CMS for my Capstone Class',
                     tasks => [
                         'CMS that is being made in Ruby on Rails',
                         'Utilizing the agile methodology',
