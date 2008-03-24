@@ -177,14 +177,17 @@ my @sections = (
                     for my $project (@projects) {
                         li {
                             if (exists $project->{url}) {
-                                a {
-                                    attr { href is $project->{url} }
-                                    $project->{name}
+                                outs $project->{name} . ' - ';
+                                small {
+                                    a {
+                                        attr { href is $project->{url} }
+                                        'repository'
+                                    }
                                 }
                             }
                             else {
                                 span {
-                                    attr { style is "color: #008" }
+                                    attr { style is "color: #000" }
                                     $project->{name}
                                 }
                             }
