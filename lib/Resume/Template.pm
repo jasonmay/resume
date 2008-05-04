@@ -80,9 +80,7 @@ my @sections = (
                         '(June 2007 - Present)' =>
                         [
                             "Make updates to the campus Web site",
-
                             "Work on individual projects for the campus",
-
                             "Research Web technologies, ".
                             "such as web programming languages, CSS, ".
                             "and MVC frameworks for the Web",
@@ -146,8 +144,8 @@ my @sections = (
                 },
                 {
                     name => 'Dataninja Interface',
-                    url  => "http://j.asonmay.net/".
-                            "darcsweb/index.cgi?r=Dataninja;a=tree",
+#                    url  => "http://j.asonmay.net/".
+#                            "darcsweb/index.cgi?r=Dataninja;a=tree",
                     tasks => [
                         'Interface for a logging bot on Internet Relay Chat',
                         'Being developed for fun',
