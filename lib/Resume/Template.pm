@@ -34,7 +34,7 @@ my @sections = (
                 q{Programming} => sub {
                     ul {
                         li { "Perl (Jifty, DBI, Test-driven Development)" }
-                        li { "Ruby on Rails (Test-driven Development)" }
+                        li { "Ruby on Rails" }
                         li { "Java (Servlets, JSP, Database, Networking)" }
                         li { "PHP (CakePHP, Drupal)" }
                     }
