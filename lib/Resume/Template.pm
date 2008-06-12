@@ -44,7 +44,7 @@ my @sections = (
                 q{Tools} => sub {
                     ul {
                         li { "Editing: Vim, Dreamweaver, Eclipse (original, Aptana), Netbeans, GIMP, Photoshop" }
-                        li { "Utilities: Apache, Bash" }
+                        li { "Utilities: Apache, Bourne Shell" }
                         li { "SCM: Subversion, darcs" }
                         li { "Database: PostgreSQL, MySQL" }
                         li { "Misc: XML, YAML" }
