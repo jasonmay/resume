@@ -209,6 +209,15 @@ my @sections = (
                         }
                     }
                 ],
+                [
+                    q{Hobbies} => sub {
+                        ul {
+                            li { "Writing silly Perl scripts" }
+                            li { "IRC" }
+                            li { "NetHack" }
+                        }
+                    }
+                ]
                 );
 
                 for (@interests) {
