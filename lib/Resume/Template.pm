@@ -57,7 +57,7 @@ my @sections = (
                     ul {
                         li {
                             "*nix: ".
-                            "Gentoo 2007.0, Debian (Etch, Lenny), Ubuntu, FreeBSD 6.x, OpenBSD 4.x" }
+                            "Gentoo 2007.0, Debian (Etch, Lenny), Ubuntu, FreeBSD 6.x, OpenBSD 4.x, OS X (Leopard)" }
                     }
                 }
             ],
