@@ -11,10 +11,10 @@ my @sections = (
         [ 
             education => sub {
                 my %data = (
-                    'University'            => "The Pennsylvania State University",
-                    'GPA'                   => '3.42/4.00',
-                    'Expected to graduate'  => "Spring 2009",
-                    'Status'                => "I am currently on my sixth semester. I currently have one (time consuming) three-credit class. I will not be taking any classes this summer (2008).",
+                    'University'           => "Pennsylvania State University",
+                    'GPA'                  => '3.42/4.00',
+                    'Expected to graduate' => "Spring 2009",
+                    'Status'               => q{I am currently not taking any classes this sumemr.  I will be attending classes full-time this fall.},
                 );
 
                 table {
