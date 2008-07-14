@@ -169,6 +169,13 @@ my @sections = (
                         'Archiving system powered by Java Servlets',
                         'Involved hundreds of thousands of rows in databases',
                     ]
+                },
+                {
+                    name => 'PSU WebAccess System Kit',
+                    tasks => [
+                        'Small kit used for providing Penn State student authentication',
+                        'Aimed to be a drop-in bundle for Apache',
+                    ]
                 }
                 );
 
