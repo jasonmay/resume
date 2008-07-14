@@ -127,7 +127,7 @@ my @sections = (
                 {
                     name  => 'This resume',
                     url   => "http://j.asonmay.net/".
-                            "darcsweb/index.cgi?r=Resume;a=tree",
+                            "darcsweb/index.py?r=Resume;a=tree",
                     tasks => [
                         'Made with a Perl templating module: Template::Declare',
                         'Currently in development'
@@ -136,7 +136,7 @@ my @sections = (
                 {
                     name => 'Photos',
                     url  => "http://j.asonmay.net/".
-                            "darcsweb/index.cgi?r=Photos;a=tree",
+                            "darcsweb/index.py?r=Photos;a=tree",
                     tasks => [
                         'Made in Jifty, a Web app builder in Perl',
                         'Being developed for fun',
@@ -146,7 +146,7 @@ my @sections = (
                 {
                     name => 'Dataninja Interface',
 #                    url  => "http://j.asonmay.net/".
-#                            "darcsweb/index.cgi?r=Dataninja;a=tree",
+#                            "darcsweb/index.py?r=Dataninja;a=tree",
                     tasks => [
                         'Interface for a logging bot on Internet Relay Chat',
                         'Being developed for fun',
