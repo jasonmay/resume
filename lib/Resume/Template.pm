@@ -8,13 +8,13 @@ use List::Util qw/first/;
 
 # made to be an array for the ease of maintaining order
 my @sections = (
-        [ 
+        [
             education => sub {
                 my %data = (
                     'University'           => "Pennsylvania State University",
-                    'GPA'                  => '3.42/4.00',
-                    'Expected to graduate' => "Spring 2009",
-                    'Status'               => q{I am currently not taking any classes this sumemr.  I will be attending classes full-time this fall.},
+                    'GPA'                  => '3.47/4.00',
+                    'Expected to graduate' => "Summer/Fall 2009",
+                    'Status'               => q{I am taking three classes this spring. I have <strong>three classes left</strong>, and I plan to finish them at night (starting May) and work full-time in the day.},
                 );
 
                 table {
@@ -27,7 +27,7 @@ my @sections = (
                 }
             }
         ],
-        [ 
+        [
         skills => sub {
             my @skills = (
             [
@@ -37,6 +37,7 @@ my @sections = (
                         li { "Ruby on Rails" }
                         li { "Java (Servlets, JSP, Database, Networking)" }
                         li { "PHP (CakePHP, Drupal)" }
+                        li { "JavaScript (jQuery)" }
                     }
                 }
             ],
@@ -45,7 +46,8 @@ my @sections = (
                     ul {
                         li { "Editing: Vim, Dreamweaver, Eclipse (original, Aptana), Netbeans, GIMP, Photoshop" }
                         li { "Utilities: Apache, FastCGI, Bourne Shell" }
-                        li { "SCM: Subversion, darcs" }
+                        li { "Networking: IPTables, BIND 9, PF" }
+                        li { "SCM: Subversion, darcs, git" }
                         li { "Database: PostgreSQL, MySQL, SQLite" }
                         li { "Tracking: AgileTrack" }
                         li { "Misc: XML, YAML" }
@@ -72,7 +74,7 @@ my @sections = (
             }
         }
         ],
-        [ 
+        [
             experience => sub {
                 my  @experience = (
                     [
@@ -121,13 +123,13 @@ my @sections = (
                 }
             }
         ],
-        [ 
+        [
             projects => sub {
                 my @projects = (
                 {
                     name  => 'This resume',
-                    url   => "http://j.asonmay.net/".
-                            "darcsweb/index.py?r=Resume;a=tree",
+#                    url   => "http://j.asonmay.net/".
+#                            "darcsweb/index.py?r=Resume;a=tree",
                     tasks => [
                         'Made with a Perl templating module: Template::Declare',
                         'Currently in development'
@@ -135,8 +137,8 @@ my @sections = (
                 },
                 {
                     name => 'Photos',
-                    url  => "http://j.asonmay.net/".
-                            "darcsweb/index.py?r=Photos;a=tree",
+#                    url  => "http://j.asonmay.net/".
+#                            "darcsweb/index.py?r=Photos;a=tree",
                     tasks => [
                         'Made in Jifty, a Web app builder in Perl',
                         'Being developed for fun',
@@ -145,8 +147,7 @@ my @sections = (
                 },
                 {
                     name => 'Dataninja Interface',
-#                    url  => "http://j.asonmay.net/".
-#                            "darcsweb/index.py?r=Dataninja;a=tree",
+                    url  => "http://github.com/jasonmay/dataninja/tree/master",
                     tasks => [
                         'Interface for a logging bot on Internet Relay Chat',
                         'Being developed for fun',
@@ -211,6 +212,7 @@ my @sections = (
                 [
                     q{Conferences and Workshops} => sub {
                         ul {
+                            li { "YAPC::NA 2008" }
                             li { "Frozen Perl 2008" }
                             li { "Harrisburg Ruby Group meetups" }
                             li { "Harrisburg Linux User Group meetups" }
@@ -220,9 +222,9 @@ my @sections = (
                 [
                     q{Hobbies} => sub {
                         ul {
-                            li { "Writing silly Perl scripts" }
+                            li { "Traveling" }
+                            li { "Tinkering with technology" }
                             li { "IRC" }
-                            li { "NetHack" }
                         }
                     }
                 ]
@@ -272,7 +274,7 @@ template wrap => sub {
             link { attr { rel is 'stylesheet', href is 'resume.css' } }
         }
         body {
-            show 'top';       
+            show 'top';
             show('section', $_->[0]) for @sections;
             show 'footer';
         }
