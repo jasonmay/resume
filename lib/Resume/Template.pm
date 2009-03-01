@@ -21,7 +21,7 @@ my @sections = (
                     for (keys %data) {
                         row {
                             cell { b { $_ }  }
-                            cell { $data{$_} }
+                            cell { outs_raw $data{$_} }
                         }
                     }
                 }
