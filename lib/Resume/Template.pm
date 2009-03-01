@@ -49,7 +49,7 @@ my @sections = (
                         li { "Networking: IPTables, BIND 9, PF" }
                         li { "SCM: Subversion, darcs, git" }
                         li { "Database: PostgreSQL, MySQL, SQLite" }
-                        li { "Tracking: AgileTrack" }
+                        li { "Tracking: AgileTrack, RT" }
                         li { "Misc: XML, YAML" }
                     }
                 }
