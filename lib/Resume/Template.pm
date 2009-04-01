@@ -13,8 +13,8 @@ my @sections = (
                 my %data = (
                     'University'           => "Pennsylvania State University",
                     'GPA'                  => '3.47/4.00',
-                    'Expected to graduate' => "Summer/Fall 2009",
-                    'Status'               => q{I am taking three classes this spring. I have <strong>three classes left</strong>, and I plan to finish them at night (starting May) and work full-time in the day.},
+                    'Expected to graduate' => "Summer 2009",
+                    'Status'               => q{I am taking three classes this spring. I have <strong>three classes left</strong>, and I plan to finish them all as on-line classes from May to the end of June.},
                 );
 
                 table {
