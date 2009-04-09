@@ -37,7 +37,7 @@ my @sections = (
                         li { "Ruby on Rails" }
                         li { "Java (Servlets, JSP, Database, Networking)" }
                         li { "PHP (CakePHP, Drupal)" }
-                        li { "JavaScript (jQuery)" }
+                        li { "JavaScript (Basic DOM, jQuery)" }
                     }
                 }
             ],
@@ -117,7 +117,7 @@ my @sections = (
                     ],
                     [
                         'Penn State York',
-                        'Helpdesk',
+                        'Help Desk',
                         '(January 2006 - May 2007)' =>
                         [
                             "Solved IT-related problems among the campus"
