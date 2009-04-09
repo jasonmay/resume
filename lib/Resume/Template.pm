@@ -154,8 +154,7 @@ my @sections = (
                 my @projects = (
                 {
                     name  => 'This resume',
-#                    url   => "http://j.asonmay.net/".
-#                            "darcsweb/index.py?r=Resume;a=tree",
+                    url   => "http://github.com/jasonmay/resume/tree/master",
                     tasks => [
                         'Made with a Perl templating module: Template::Declare',
                         'Currently in development'
@@ -163,12 +162,11 @@ my @sections = (
                 },
                 {
                     name => 'Photos',
-#                    url  => "http://j.asonmay.net/".
-#                            "darcsweb/index.py?r=Photos;a=tree",
+                    url   => "http://github.com/jasonmay/photos/tree/master",
                     tasks => [
                         'Made in Jifty, a Web app builder in Perl',
                         'Being developed for fun',
-                        'Currently in development'
+                        'Still a work in progress'
                     ]
                 },
                 {
@@ -187,7 +185,6 @@ my @sections = (
                         'Utilizing the agile methodology',
                         'Assigned to be the scrum master of the development team',
                         'Working in a team of eight developers',
-                        'Currently in development'
                     ]
                 },
                 {
@@ -195,6 +192,7 @@ my @sections = (
                     tasks => [
                         'Archiving system powered by Java Servlets',
                         'Involved hundreds of thousands of rows in databases',
+                        'Involved converting MS Access to SQL Server',
                     ]
                 },
                 {
@@ -202,10 +200,16 @@ my @sections = (
                     tasks => [
                         'Small kit used for providing Penn State student authentication',
                         'Aimed to be a drop-in bundle for Apache',
+                        'Primarily written in Bash',
                     ]
                 }
                 );
 
+                small { em {
+                    outs 'Feel free to browse my ';
+                    a { attr { href is 'http://github.com/jasonmay' } "Github" };
+                    outs " repository.";
+                } }
                 ul {
                     for my $project (@projects) {
                         li {
@@ -242,6 +246,7 @@ my @sections = (
                             li { "Frozen Perl 2008" }
                             li { "Harrisburg Ruby Group meetups" }
                             li { "Harrisburg Linux User Group meetups" }
+                            li { "(Central PA) New Tech meetups" }
                         }
                     }
                 ],
