@@ -58,8 +58,24 @@ my @sections = (
                 q{Operating Systems} => sub {
                     ul {
                         li {
-                            "*nix: ".
-                            "Gentoo 2007.0, Debian (Etch, Lenny), Ubuntu, CentOS, FreeBSD 6.x, OpenBSD 4.x, OS X (Leopard)" }
+                            "Linux: ".
+                            join  q{, } =>
+                                'Gentoo 2007.0',
+                                'Debian (Etch and Lenny)',
+                                'Ubuntu',
+                                'CentOS'
+                        }
+                        li {
+                            "BSD: ".
+                            "FreeBSD 6.x and 7.0, OpenBSD 4.x, OS X"
+                        }
+                        li {
+                            "Windows: ".
+                            join q{, } =>
+                                'Windows 2000 (MCP)',
+                                'Windows XP (SP 2 and 3)',
+                                'Windows Vista'
+                        }
                     }
                 }
             ],
