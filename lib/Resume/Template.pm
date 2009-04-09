@@ -90,6 +90,16 @@ my @sections = (
                         ]
                     ],
                     [
+                        'Freelance',
+                        'Web Developer',
+                        '(June 2007 - Present)' =>
+                        [
+                            "Write PHP/MySQL back-end code for Oz2designs",
+                            "Make given static pages self-updateable",
+                            "Release satisfactory sites or various local companies"
+                        ]
+                    ],
+                    [
                         'Penn State York',
                         'Helpdesk',
                         '(January 2006 - May 2007)' =>
