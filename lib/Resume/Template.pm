@@ -46,7 +46,7 @@ my @sections = (
                     ul {
                         li { "Editing: Vim, Dreamweaver, Eclipse (original, Aptana), Netbeans, GIMP, Photoshop" }
                         li { "Utilities: Apache, FastCGI, Bourne Shell" }
-                        li { "Networking: IPTables, BIND 9, PF" }
+                        li { "Networking: IPTables, BIND 9, PF, Kickstart" }
                         li { "SCM: Subversion, darcs, git" }
                         li { "Database: PostgreSQL, MySQL, SQLite" }
                         li { "Tracking: AgileTrack, RT" }
@@ -59,7 +59,7 @@ my @sections = (
                     ul {
                         li {
                             "*nix: ".
-                            "Gentoo 2007.0, Debian (Etch, Lenny), Ubuntu, FreeBSD 6.x, OpenBSD 4.x, OS X (Leopard)" }
+                            "Gentoo 2007.0, Debian (Etch, Lenny), Ubuntu, CentOS, FreeBSD 6.x, OpenBSD 4.x, OS X (Leopard)" }
                     }
                 }
             ],
