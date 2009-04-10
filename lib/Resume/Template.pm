@@ -112,7 +112,7 @@ my @sections = (
                         [
                             "Write PHP/MySQL back-end code for Oz2designs",
                             "Make given static pages self-updateable",
-                            "Release satisfactory sites or various local companies"
+                            "Release satisfactory sites for various local companies"
                         ]
                     ],
                     [
