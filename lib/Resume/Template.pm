@@ -303,6 +303,27 @@ template wrap => sub {
     html {
         head {
             link { attr { rel is 'stylesheet', href is 'resume.css' } }
+            title { 'Resume - jasonmay - York, PA' }
+            meta {
+                attr {
+                    name is "description",
+                    content is "This is the home of jasonmay, programmer of " .
+                    "Perl, tinkerer of technology, networking/programming " .
+                    "enthusiast.",
+                }
+            }
+            meta {
+                attr {
+                    name is "keywords",
+                    content is "jasonmay, linux, perl, git, github, web, html, css, jquery, postgresql, york, pa, pennsylvania",
+                }
+            }
+            meta {
+                attr {
+                    name is "author",
+                    content is "jasonmay",
+                }
+            }
         }
         body {
             show 'top';
