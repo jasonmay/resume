@@ -48,7 +48,7 @@ my @sections = (
                         li { "Utilities: Apache, FastCGI, Bourne Shell" }
                         li { "Networking: IPTables, BIND 9, PF, Kickstart" }
                         li { "SCM: Subversion, darcs, git" }
-                        li { "Database: PostgreSQL, MySQL, SQLite" }
+                        li { "Database: PostgreSQL, MySQL, SQLite, SQL Server (2000 and 2005)" }
                         li { "Tracking: AgileTrack, RT" }
                         li { "Misc: XML, YAML" }
                     }
