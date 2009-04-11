@@ -181,10 +181,10 @@ my @sections = (
                 {
                     name => 'Ruby on Rails CMS for my Capstone Class',
                     tasks => [
-                        'CMS that is being made in Ruby on Rails',
-                        'Utilizing the agile methodology',
+                        'CMS that was made in Ruby on Rails',
+                        'Utilized agile methodology',
                         'Assigned to be the scrum master of the development team',
-                        'Working in a team of eight developers',
+                        'Worked in a team of eight developers',
                     ]
                 },
                 {
