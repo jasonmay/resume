@@ -25,7 +25,7 @@ my @sections = (
                         }
                     }
                 }
-            }
+            },
         ],
         [
         skills => sub {
@@ -237,9 +237,75 @@ my @sections = (
             }
         ],
         [
+            contributions => sub {
+                p {
+                    b { 'Perl Contributions:' }
+                    ul {
+                        li {
+                            outs 'CPAN';
+                            ul {
+                                li {
+                                    a {
+                                        attr {
+                                            href => 'http://search.cpan.org/~jasonmay/App-Dataninja-0.03/lib/App/Dataninja.pm'
+                                        } 'App::Dataninja'
+                                    }
+                                }
+                                li { 'Dataninja is finally on the CPAN' }
+                            }
+                        }
+                    }
+                    ul {
+                        li {
+                            a { attr { href => 'http://search.cpan.org/search?query=dbix::class' } 'DBIx::Class' }
+                            ul {
+                                li { 'Fixed a bug involving classless result sources' }
+                                li {
+                                    a {
+                                        attr {
+                                            href => 'http://dev.catalyst.perl.org/svnweb/bast/revision/?rev=6023'
+                                        } 'The fix'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ul {
+                        li {
+                            a { attr { href => 'http://search.cpan.org/search?query=Jifty::DBI' } 'Jifty::DBI' }
+                            ul {
+                                li { 'Implemented clear_order_by' }
+                                li { 'Fixed various typos and updated documentation' }
+                            }
+                        }
+                    }
+                    ul {
+                        li {
+                            a { attr { href => 'http://search.cpan.org/search?query=Moose' } 'Moose' }
+                            ul {
+                                li {
+                                    'MooseX::AttributeHelpers: ' .
+                                    'Implemented curries for method providers'
+                                }
+                                li {
+                                    'MooseX::AttributeHelpers: ' .
+                                    'Added the Bool method provider'
+                                }
+                                li {
+                                    'MooseX::NonMoose: ' .
+                                    'Provided tests for extending classes' .
+                                    'that already use MooseX::NonMoose'
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            ],
+            [
             interests => sub {
                 my @interests = (
-                [
+                    [
                     q{Conferences and Workshops} => sub {
                         ul {
                             li { "YAPC::NA 2008" }
@@ -249,8 +315,8 @@ my @sections = (
                             li { "(Central PA) New Tech meetups" }
                         }
                     }
-                ],
-                [
+                    ],
+                    [
                     q{Hobbies} => sub {
                         ul {
                             li { "Traveling" }
@@ -258,7 +324,7 @@ my @sections = (
                             li { "IRC" }
                         }
                     }
-                ]
+                    ]
                 );
 
                 for (@interests) {
@@ -269,68 +335,68 @@ my @sections = (
                     }
                 }
             }
-        ]
-);
+            ]
+        );
 
-for (@sections) {
-    my ($item, $code) = @$_;
-    template $item => $code;
-}
-
-template section => sub {
-    my $self = shift;
-    my $section = shift;
-    my $item = first { $_->[0] eq $section } @sections;
-
-    div {
-        attr {
-            class is "header"
+        for (@sections) {
+            my ($item, $code) = @$_;
+            template $item => $code;
         }
-        big { uc $section }
-    };
-    $item->[1]->();
-};
 
-template top => sub {
-    div { img { attr { src is "top.gif" } } }
-};
+        template section => sub {
+            my $self = shift;
+            my $section = shift;
+            my $item = first { $_->[0] eq $section } @sections;
 
-template footer => sub {
-    p { em { small { "Resume was last generated: " . localtime } } }
-};
-
-template wrap => sub {
-    html {
-        head {
-            link { attr { rel is 'stylesheet', href is 'resume.css' } }
-            title { 'Resume - jasonmay - York, PA' }
-            meta {
+            div {
                 attr {
-                    name is "description",
-                    content is "This is the home of jasonmay, programmer of " .
-                    "Perl, tinkerer of technology, networking/programming " .
-                    "enthusiast.",
+                    class is "header"
+                }
+                big { uc $section }
+            };
+            $item->[1]->();
+        };
+
+        template top => sub {
+            div { img { attr { src is "top.gif" } } }
+        };
+
+        template footer => sub {
+            p { em { small { "Resume was last generated: " . localtime } } }
+        };
+
+        template wrap => sub {
+            html {
+                head {
+                    link { attr { rel is 'stylesheet', href is 'resume.css' } }
+                    title { 'Resume - jasonmay - York, PA' }
+                    meta {
+                        attr {
+                            name is "description",
+                            content is "This is the home of jasonmay, programmer of " .
+                            "Perl, tinkerer of technology, networking/programming " .
+                            "enthusiast.",
+                        }
+                    }
+                    meta {
+                        attr {
+                            name is "keywords",
+                            content is "jasonmay, linux, perl, git, github, web, html, css, jquery, postgresql, york, pa, pennsylvania",
+                        }
+                    }
+                    meta {
+                        attr {
+                            name is "author",
+                            content is "jasonmay",
+                        }
+                    }
+                }
+                body {
+                    show 'top';
+                    show('section', $_->[0]) for @sections;
+                    show 'footer';
                 }
             }
-            meta {
-                attr {
-                    name is "keywords",
-                    content is "jasonmay, linux, perl, git, github, web, html, css, jquery, postgresql, york, pa, pennsylvania",
-                }
-            }
-            meta {
-                attr {
-                    name is "author",
-                    content is "jasonmay",
-                }
-            }
-        }
-        body {
-            show 'top';
-            show('section', $_->[0]) for @sections;
-            show 'footer';
-        }
-    }
-};
+        };
 
-1;
+        1;
