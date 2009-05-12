@@ -180,7 +180,8 @@ my @sections = (
                     name => 'Penn State Schedule Machine',
                     url  => "http://github.com/jasonmay/pssm/tree/master",
                     tasks => [
-                        "A 'better' version of Penn State's schedule calendar generator",
+                        "A 'better' version of the official Penn State " .
+                        "(eLion)schedule calendar generator",
                         "Uses AJAX (jQuery) to scrape course information",
                     ]
                 },
@@ -308,7 +309,7 @@ my @sections = (
                                 }
                                 li {
                                     'MooseX::NonMoose: ' .
-                                    'Provided tests for extending classes' .
+                                    'Provided tests for extending classes ' .
                                     'that already use MooseX::NonMoose'
                                 }
                             }
