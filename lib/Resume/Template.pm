@@ -181,7 +181,7 @@ my @sections = (
                     url  => "http://github.com/jasonmay/pssm/tree/master",
                     tasks => [
                         "A 'better' version of the official Penn State " .
-                        "(eLion)schedule calendar generator",
+                        "(eLion) weekly schedule generator",
                         "Uses AJAX (jQuery) to scrape course information",
                     ]
                 },
