@@ -14,7 +14,7 @@ my @sections = (
                     'University'           => "Pennsylvania State University",
                     'GPA'                  => '3.47/4.00',
                     'Expected to graduate' => "Summer 2009",
-                    'Status'               => q{I am taking three classes this spring. I have <strong>three classes left</strong>, and I plan to finish them all as on-line classes from May to the end of June.},
+                    'Status'               => q{I have <strong>three classes left</strong>, and I plan to finish them all as on-line classes from mid-May to the end of June.},
                 );
 
                 table {
@@ -161,23 +161,38 @@ my @sections = (
                     ]
                 },
                 {
-                    name => 'Photos',
-                    url   => "http://github.com/jasonmay/photos/tree/master",
+                    name => 'Peacekeeper',
                     tasks => [
-                        'Made in Jifty, a Web app builder in Perl',
-                        'Being developed for fun',
-                        'Still a work in progress'
+                        'Linux deployment project using CentOS and Kickstart',
+                        'Designed for deploying computers on an isolated intranet',
+                        'Deployed computers get donated to communities that need them',
                     ]
                 },
                 {
-                    name => 'Dataninja Interface',
+                    name => 'Dataninja',
                     url  => "http://github.com/jasonmay/dataninja/tree/master",
                     tasks => [
                         'Interface for a logging bot on Internet Relay Chat',
                         'Being developed for fun',
-                        'Currently in development'
                     ]
                 },
+                {
+                    name => 'Penn State Schedule Machine',
+                    url  => "http://github.com/jasonmay/pssm/tree/master",
+                    tasks => [
+                        "A 'better' version of Penn State's schedule calendar generator",
+                        "Uses AJAX (jQuery) to scrape course information",
+                    ]
+                },
+#                {
+#                    name => 'Photos',
+#                    url   => "http://github.com/jasonmay/photos/tree/master",
+#                    tasks => [
+#                        'Made in Jifty, a Web app builder in Perl',
+#                        'Being developed for fun',
+#                        'Still a work in progress'
+#                    ]
+#                },
                 {
                     name => 'Ruby on Rails CMS for my Capstone Class',
                     tasks => [
@@ -202,7 +217,7 @@ my @sections = (
                         'Aimed to be a drop-in bundle for Apache',
                         'Primarily written in Bash',
                     ]
-                }
+                },
                 );
 
                 small { em {
@@ -313,6 +328,7 @@ my @sections = (
                             li { "Harrisburg Ruby Group meetups" }
                             li { "Harrisburg Linux User Group meetups" }
                             li { "(Central PA) New Tech meetups" }
+                            li { "SCROUNGE - Students for Computer Recycling to Outfit Underrepresented Non-profit Groups in Education" }
                         }
                     }
                     ],
