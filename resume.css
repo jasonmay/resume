@@ -1,0 +1,30 @@
+body {
+    font-family: helvetica,sans-serif;
+    font-size: 80%;
+}
+
+h1.section {
+    width: 50%;
+   background-color: #ffe;
+    border: solid 2px black;
+    text-transform: uppercase;
+    padding-left: 8px;
+}
+
+h1#contact {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #eef;
+    border: solid 1px black;
+    font-style: serif;
+    font-size: 125%;
+}
+
+h2 {
+    width: 40%;
+}
+
+span.section_label {
+    font-weight: bold;
+}
